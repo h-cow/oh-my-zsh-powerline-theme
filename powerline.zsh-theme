@@ -109,17 +109,17 @@ ZSH_THEME_GIT_PROMPT_DIVERGED=" ⬍"
 # else
     if [ "$POWERLINE_SHOW_GIT_ON_RIGHT" = "" ]; then
         if [ "$POWERLINE_HIDE_GIT_PROMPT_STATUS" = "" ]; then
-            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}"$'\ue0b0'"%F{white}%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)%F{white}'
+            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}%F{white}%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)%F{white}'
         else
-            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}"$'\ue0b0'"%F{white}%F{black}%K{white}"$'$(git_prompt_info)%F{white}'
+            POWERLINE_GIT_INFO_LEFT=" %F{blue}%K{white}%F{white}%F{black}%K{white}"$'$(git_prompt_info)%F{white}'
         fi
         POWERLINE_GIT_INFO_RIGHT=""
     else
         POWERLINE_GIT_INFO_LEFT=""
         if [ "$POWERLINE_HIDE_GIT_PROMPT_STATUS" = "" ]; then
-            POWERLINE_GIT_INFO_RIGHT="%F{white}"$'\ue0b2'"%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)'" %K{white}"
+            POWERLINE_GIT_INFO_RIGHT="%F{white}%F{black}%K{white}"$'$(git_prompt_info)$(git_prompt_status)'" %K{white}"
         else
-            POWERLINE_GIT_INFO_RIGHT="%F{white}"$'\ue0b2'"%F{black}%K{white}"$'$(git_prompt_info)'" %K{white}"
+            POWERLINE_GIT_INFO_RIGHT="%F{white}%F{black}%K{white}"$'$(git_prompt_info)'" %K{white}"
         fi
     fi
 # fi
@@ -147,4 +147,4 @@ else
     VENV_STATUS=""
 fi
 
-PROMPT="%F{black}%K{blue} "$POWERLINE_PATH"%F{blue}"$POWERLINE_GIT_INFO_LEFT" %k"$'\ue0b0'"%f "
+PROMPT="%F{black}%K{blue} "$POWERLINE_PATH"%F{blue}"$POWERLINE_GIT_INFO_LEFT" %k"$'\n'"%f"
